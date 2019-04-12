@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
 
     this.router.navigate(['/sign-up']);
 
-  } // end goToSignUp
+  } 
 
   public signinFunction: any = () => {
 
@@ -81,12 +81,8 @@ export class LoginComponent implements OnInit {
 
         });
 
-    } // end condition
+    } 
 
-  } // end signinFunction
-
-  
-
-  
+  }  
 
 }

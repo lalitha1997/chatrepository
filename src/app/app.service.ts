@@ -13,20 +13,13 @@ export class AppService {
 
   private url =  'https://chatapi.edwisor.com';
 
-  constructor(
-    public http: HttpClient
-  ) {
-
-    
-
-  } // end constructor  
-
-
+  constructor(public http: HttpClient) {
+  }
   public getUserInfoFromLocalstorage = () => {
 
     return JSON.parse(localStorage.getItem('userInfo'));
 
-  } // end getUserInfoFromLocalstorage
+  } 
 
 
   public setUserInfoInLocalStorage = (data) =>{
@@ -48,8 +41,7 @@ export class AppService {
 
     return this.http.post(`${this.url}/api/v1/users/signup`, params);
 
-  } // end of signupFunction function.
-
+  } 
   public signinFunction(data): Observable<any> {
 
     const params = new HttpParams()
@@ -57,7 +49,7 @@ export class AppService {
       .set('password', data.password);
 
     return this.http.post(`${this.url}/api/v1/users/login`, params);
-  } // end of signinFunction function.
+  } 
 
   
   public logout(): Observable<any> {
@@ -67,7 +59,7 @@ export class AppService {
 
     return this.http.post(`${this.url}/api/v1/users/logout`, params);
 
-  } // end logout function
+  } 
 
   
 
@@ -83,12 +75,12 @@ export class AppService {
 
       errorMessage = `Server returned code: ${err.status}, error message is: ${err.message}`;
 
-    } // end condition *if
+    } 
 
     console.error(errorMessage);
 
     return Observable.throw(errorMessage);
 
-  }  // END handleError
+  }  
 
 }

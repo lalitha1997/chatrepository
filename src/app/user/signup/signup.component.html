@@ -2,8 +2,7 @@
 
     <a class="navbar-brand" href="/">My Chat</a>
   
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
   
       <span class="navbar-toggler-icon"></span>
   
@@ -25,13 +24,11 @@
   
   </nav>
   
-  <div class="row p-0 m-0">
+  <div class="row" >
+ 
+    <div class="col-md-6 p-5" style="float:none;margin: 0 auto;">
   
-    <div class="col-sm"></div>
-  
-    <div class="col-sm p-5">
-  
-      <h2 class="form-signin-heading">Sign Up To Start Chat</h2>
+      <h2>Sign Up To Start Chat</h2>
   
       <br>
   
@@ -39,7 +36,7 @@
   
       <label for="inputFirstName" class="sr-only">FirstName</label>
   
-      <input type="text" id="inputFirstName" class="form-control" [(ngModel)]="firstName" placeholder="FirstName" required autofocus>
+      <input type="text" id="inputFirstName" class="form-control" [(ngModel)]="firstName" placeholder="FirstName" required >
   
       <br>
   
@@ -78,7 +75,7 @@
   
       <span>API Key: </span>
   
-      <label for="inputPassword" class="sr-only">AuthKey</label>
+      <label for="inputPassword"class="sr-only" >AuthKey</label>
   
       <textarea type="password" id="AuthKey" class="form-control" [(ngModel)]="apiKey" placeholder="API Key" required></textarea>
   
@@ -88,7 +85,7 @@
   
     </div>
   
-    <div class="col-sm"></div>
+    
   
   </div>
   

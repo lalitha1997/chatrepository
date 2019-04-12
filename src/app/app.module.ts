@@ -6,6 +6,7 @@ import {RouterModule,Routes} from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
  
 import { AppComponent } from './app.component';
 import { ChatModule } from './chat/chat.module';
@@ -23,13 +24,13 @@ import { AppService } from './app.service';
     ChatModule,
     UserModule,
     SharedModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot() ,
     AppRoutingModule,
     RouterModule.forRoot([
           {path:'login',component:LoginComponent,pathMatch:'full'},
           {path:'',redirectTo:'login',pathMatch:'full'},
-          {path:'*',component:LoginComponent},
           {path:'**',component:LoginComponent}
     ])
   ],

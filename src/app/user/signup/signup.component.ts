@@ -33,8 +33,7 @@ export class SignupComponent implements OnInit {
   
       this.router.navigate(['/']);
   
-    } // end goToSignIn
-  
+    } 
     public signupFunction: any = () => {
   
       if (!this.firstName) {
@@ -97,9 +96,8 @@ export class SignupComponent implements OnInit {
   
           });
   
-      } // end condition
-  
-    } // end signupFunction
+      } 
+    } 
   
   }
   
