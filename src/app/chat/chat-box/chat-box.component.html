@@ -11,7 +11,7 @@
         <button (click)="logout()" class="btn btn-info customButton">Logout</button>
       </div>
 
-      <ul class="list">
+      <ul class="list" style="list-style-type: none;">
         <li class="p-2 typeOfChats">
           Online Users:
         </li>
@@ -30,7 +30,7 @@
 
     <div class="col-12 col-sm-8 col-md-8 chat">
       <div class="chat-header clearfix mobileMenu" *ngIf="receiverName">
-        <first-char [name]="receiverName" [userBg]="'blue'" [userColor]="'white'" (notify)="showUserName($event)"></first-char>
+        <first-char [name]="receiverName" (notify)="showUserName($event)"></first-char>
 
         <div class="chat-about">
           <div class="chat-with">Chat with {{receiverName}}</div>
@@ -39,7 +39,7 @@
       
       <div #scrollMe [scrollTop]="(scrollToChatTop)?0:scrollMe.scrollHeight" class="chat-history" *ngIf="receiverName">
 
-        <ul>
+        <ul style="list-style-type: none;">
           <li class="textCenter" *ngIf="receiverName">
 
             <span  class="cursorPointer" (click)="loadEarlierPageOfChat()">Load Previous Chat</span>
@@ -67,8 +67,8 @@
 
       </div>
       <div *ngIf="!receiverName" class="col-sm blankContent">
-        Click on user for start a chat!!!
-      </div>
+          Click on user for start a chat!!!
+        </div>
       
 
       <div class="chat-message clearfix p-2" *ngIf="receiverName">

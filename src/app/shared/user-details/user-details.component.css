@@ -1,5 +1,5 @@
 .crop {
-    border-radius: 100%;
+  border-radius: 100%;
     line-height: 1em;
     padding: 1em;
     text-align: center;
@@ -12,12 +12,10 @@
   
   .about {
     float: left;
-    padding-left: 0.4em;
+    
   }
   
-  .online,
-  .offline,
-  .me,
+  
   .warning {
     margin-right: 3px;
     font-size: 0.8em;
@@ -43,6 +41,4 @@
     color: #92959E;
   }
   
-  .name {
-    float: left;
-  }
+  

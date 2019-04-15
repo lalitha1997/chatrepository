@@ -8,8 +8,7 @@ import { Component, OnChanges, Input, EventEmitter, Output, OnInit, SimpleChange
 export class FirstCharComponent implements OnInit,OnChanges {
 
   @Input() name: string;
-  @Input() userBg: string;
-  @Input() userColor: string;
+  
 
   public firstChar: string;
   private _name:string = '';
